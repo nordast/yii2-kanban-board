@@ -17,7 +17,7 @@ There are multiple ways to install KanbanBoard.
 - Clone to your machine
 
 ```
-git clone https://github.com/igor162/KanbanBoard.git
+git clone https://github.com/igor162/yii2-kanban-board.git
 ```
 
 **Composer**
