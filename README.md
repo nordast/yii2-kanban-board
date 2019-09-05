@@ -23,5 +23,5 @@ git clone https://github.com/igor162/yii2-kanban-board.git
 **Composer**
 
 ```
-composer require "igor162/KanbanBoard" "dev-master"
+composer require "igor162/yii2-kanban-board" "dev-master"
 ```
