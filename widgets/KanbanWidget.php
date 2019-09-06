@@ -285,7 +285,7 @@ JS;
     protected function registerAssets()
     {
         $view = $this->getView();
-        AdminLooperAsset::register($view);
+        KanbanBoardAsset::register($view);
     }
 
 }

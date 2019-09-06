@@ -9,7 +9,7 @@ use Yii;
  */
 class KanbanBoardAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@vendor/igor162/KanbanBoard/assets';
+    public $sourcePath = '@vendor/igor162/yii2-kanban-board/assets';
 
     public $css = [
         'css/kanban.css',
