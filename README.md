@@ -26,7 +26,7 @@ git clone https://github.com/igor162/yii2-kanban-board.git
 composer require "igor162/yii2-kanban-board" "dev-master"
 ```
 
-**Example**
+**Php code example**
 
 ```php
 <?php
@@ -94,3 +94,7 @@ use app\modules\task\models\Task;
 <?php Box::end(); ?>
 
 ```
+
+**Plugin example**
+
+![Image alt](https://github.com/igor162/yii2-kanban-board/gift/example.gift)
