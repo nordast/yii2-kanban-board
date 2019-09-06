@@ -97,4 +97,4 @@ use app\modules\task\models\Task;
 
 **Plugin example**
 
-![Image alt](https://github.com/igor162/yii2-kanban-board/gift/example.gift)
+![Image alt](https://github.com/igor162/yii2-kanban-board/gift/example.gif)
