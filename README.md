@@ -30,10 +30,13 @@ composer require "igor162/yii2-kanban-board" "dev-master"
 
 ```php
 <?php
-
 use igor162\KanbanBoard\widgets\KanbanWidget;
 use igor162\adminlte\widgets\Box;
-
+use app\widgets\actions\Helper;
+use app\modules\task\models\TaskStatus;
+use app\modules\task\models\Task;
+/* @var $data app\modules\task\models\Task */
+/* @var $this yii\web\View */
 ?>
 <?php Box::begin([
     'type' => false,
@@ -43,7 +46,6 @@ use igor162\adminlte\widgets\Box;
 
 <?= KanbanWidget::widget([
     'data' => $data,
-//    'dataRoute' => Url::toRoute(['task/task-list'/*, 'form' => Disguise::FORM_TYPE_AJAX, 'returnUrl' => Helper::getReturnUrl()*/]),
     'showAddTask' => KanbanWidget::SHOW_ONE, // KanbanWidget::SHOW_ALL
     'editorURLTaskStatus' => ['task-status/update', 'form' => TaskStatus::FORM_TYPE_AJAX, 'returnUrl' => Helper::getReturnUrl()],
     'addURLTask' => ['task/update', 'form' => TaskStatus::FORM_TYPE_AJAX, 'returnUrl' => Helper::getReturnUrl()],
@@ -62,14 +64,8 @@ use igor162\adminlte\widgets\Box;
                 'data-toggle' => 'modal',
                 'data-target' => '#modalViewTask',
                 'draggable' => 'false',
-                'title' => 'История операций',
+                'title' => 'Operations history',
             ],
-            /*                'action' => ContextMenuHelper::actionUrl(
-                                ['shop-stuff/update', 'returnUrl' => Helper::getReturnUrl()],
-                                [
-                                    'path' => 'id',
-                                ]
-                            ),*/
         ],
         'set_reminder' => [
             'label' => false,
@@ -78,14 +74,8 @@ use igor162\adminlte\widgets\Box;
             'options' => [
                 'class' => 'card-footer-item card-footer-item-bordered text-muted',
                 'draggable' => 'false',
-                'title' => 'Установить Напоминание',
+                'title' => 'Set Reminder',
             ],
-            /*                'action' => ContextMenuHelper::actionUrl(
-                                ['shop-stuff/update', 'returnUrl' => Helper::getReturnUrl()],
-                                [
-                                    'path' => 'id',
-                                ]
-                            ),*/
         ],
         'archive' => [
             'label' => false,
@@ -94,14 +84,8 @@ use igor162\adminlte\widgets\Box;
             'options' => [
                 'class' => 'card-footer-item card-footer-item-bordered text-muted',
                 'draggable' => 'false',
-                'title' => 'Архивировать',
+                'title' => 'Archive',
             ],
-            /*                'action' => ContextMenuHelper::actionUrl(
-                                ['shop-stuff/update', 'returnUrl' => Helper::getReturnUrl()],
-                                [
-                                    'path' => 'id',
-                                ]
-                            ),*/
         ],
     ]
 ]);
