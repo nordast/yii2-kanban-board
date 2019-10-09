@@ -9,6 +9,7 @@
       "email": "igor162@ya.ru"
     }
   ],
+  "minimum-stability": "dev",
   "license": "MIT",
   "support": {
     "issues": "https://github.com/igor162/yii2-kanban-board/issues"
